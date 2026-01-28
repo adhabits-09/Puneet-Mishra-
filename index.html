@@ -7,7 +7,7 @@
 
     <!-- SEO & Social -->
     <meta name="description" content="Join 100K+ people building digital skills for online opportunities. Puneet Mishra helps you become digitally empowered. Start today!">
-    <meta property="og:image" content="https://i.ibb.co/1DM1Jrs/mishra-2.jpg">
+    <meta property="og:image" content="https://i.ibb.co/8Lgrkz3W/puneet-new-3.jpg">
     <meta name="theme-color" content="#2C666E">
 
     <!-- Fonts -->
@@ -40,9 +40,9 @@
     <style>
         :root {
             --primary-teal: #2C666E;
-            --light-pink: #FOEDEE;
+            --light-pink: #F0EDEE;
             --midnight: #1A1A2E;
-            --cream: #FOEDEE;
+            --cream: #F0EDEE;
             --white: #FFFFFF;
             --text-dark: #1A1A2E;
             --success: #25D366;
@@ -81,6 +81,63 @@
         .accordion-button:not(.collapsed){background:linear-gradient(135deg,var(--cream),var(--white));color:var(--midnight)}
         .form-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(8px);z-index:9999;opacity:0;visibility:hidden;transition:all .4s ease}
         .form-backdrop.show{opacity:1;visibility:visible}
+
+        /* ===== VIDEO FEEDBACK SECTION STYLES ===== */
+        .feedback-viewport {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            padding-bottom: 10px;
+        }
+
+        .feedback-viewport::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .feedback-viewport::-webkit-scrollbar-track {
+            background: var(--cream);
+            border-radius: 10px;
+        }
+
+        .feedback-viewport::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, var(--primary-teal), #3A7D85);
+            border-radius: 10px;
+        }
+
+        .feedback-track {
+            display: flex;
+            gap: 15px;
+            width: max-content;
+        }
+
+        .feedback-item {
+            flex-shrink: 0;
+            width: 260px;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.4s ease;
+            position: relative;
+            box-shadow: var(--shadow);
+            background: #000;
+        }
+        
+        .feedback-item:hover {
+            transform: scale(1.03);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .feedback-item iframe {
+            display: block;
+            width: 100%;
+            height: 340px;
+            border: none;
+            border-radius: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .feedback-item { width: 220px; }
+            .feedback-item iframe { height: 280px; }
+        }
+
         #formContainer{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) scale(.9);z-index:10000;max-width:500px;width:90%;max-height:85vh;opacity:0;visibility:hidden;transition:all .4s ease}
         #formContainer.show{opacity:1;visibility:visible;transform:translate(-50%,-50%) scale(1)}
         .form-control,.form-select{border:2px solid #E5E5E5;border-radius:8px;padding:.6rem .9rem;transition:all .3s ease}
@@ -166,7 +223,7 @@
     <div class="container">
         <div class="row g-4 align-items-center">
             <div class="col-lg-6 animate-stagger" style="--order:1">
-                <img src="https://i.ibb.co/1DM1Jrs/mishra-2.jpg" alt="Puneet Mishra" class="about-img" loading="lazy">
+                <img src="https://i.ibb.co/8Lgrkz3W/puneet-new-3.jpg" alt="Puneet Mishra" class="about-img" loading="lazy">
             </div>
             <div class="col-lg-6 animate-stagger about-content" style="--order:2">
                 <div class="badge-custom mb-2">💫 Your Coach</div>
@@ -196,6 +253,56 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== VIDEO FEEDBACK SECTION ===== -->
+<section class="py-5" style="background:linear-gradient(135deg,var(--cream),var(--white))">
+    <div class="container">
+        <h2 class="text-center display-5 fw-bold mb-3 animate-stagger" style="--order:1">✨ Real Success Stories</h2>
+        <p class="text-center text-muted mb-4 animate-stagger" style="--order:2">See what our students have to say about their transformation journey</p>
+        
+        <div class="feedback-viewport animate-stagger" style="--order:3">
+            <div class="feedback-track" id="feedbackTrack">
+                <div class="feedback-item">
+                    <iframe src="https://www.youtube.com/embed/2wLWCt-TBU8?rel=0&modestbranding=1" allowfullscreen></iframe>
+                </div>
+                <div class="feedback-item">
+                    <iframe src="https://www.youtube.com/embed/AVAUcjsKAOg?rel=0&modestbranding=1" allowfullscreen></iframe>
+                </div>
+                <div class="feedback-item">
+                    <iframe src="https://www.youtube.com/embed/tWPvMl4t8Bo?rel=0&modestbranding=1" allowfullscreen></iframe>
+                </div>
+                <div class="feedback-item">
+                    <iframe src="https://www.youtube.com/embed/Y2EAZzlDnq4?rel=0&modestbranding=1" allowfullscreen></iframe>
+                </div>
+                <div class="feedback-item">
+                    <iframe src="https://www.youtube.com/embed/fqYPIjtO4OA?rel=0&modestbranding=1" allowfullscreen></iframe>
+                </div>
+                <div class="feedback-item">
+                    <iframe src="https://www.youtube.com/embed/2H26NpNY8Hg?rel=0&modestbranding=1" allowfullscreen></iframe>
+                </div>
+                <div class="feedback-item">
+                    <iframe src="https://www.youtube.com/embed/niPXfyfNZug?rel=0&modestbranding=1" allowfullscreen></iframe>
+                </div>
+                <div class="feedback-item">
+                    <iframe src="https://www.youtube.com/embed/TslOxx9CQxo?rel=0&modestbranding=1" allowfullscreen></iframe>
+                </div>
+                <div class="feedback-item">
+                    <iframe src="https://www.youtube.com/embed/-OCeDCVvcRQ?rel=0&modestbranding=1" allowfullscreen></iframe>
+                </div>
+                <div class="feedback-item">
+                    <iframe src="https://www.youtube.com/embed/l2WFidk_q9U?rel=0&modestbranding=1" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-4">
+            <button class="wa-btn open-any" data-source="Feedback Section">
+                <i data-lucide="message-circle" width="20"></i>
+                Join Our Success Stories
+            </button>
         </div>
     </div>
 </section>
