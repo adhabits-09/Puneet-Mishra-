@@ -20,8 +20,24 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 
-    <!-- Meta Pixel -->
+    <!-- ===== META PIXEL WITH AUTOMATIC EVENTS DISABLED ===== -->
     <script>
+    // Disable automatic event tracking
+    window.fbq = window.fbq || function() {
+        (window.fbq.q = window.fbq.q || []).push(arguments);
+    };
+    window.fbq.track = function() {
+        // Only allow manual Lead event, block automatic events
+        var args = arguments;
+        if (args[0] === 'Lead') {
+            // Allow manual Lead event only
+            if (window.fbq.callMethod) {
+                window.fbq.callMethod.apply(window.fbq, args);
+            }
+        }
+        // Ignore all other automatic events
+    };
+    
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -30,6 +46,10 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
+    
+    // Disable automatic configuration
+    fbq('set', 'autoConfig', false, '1978493886105678');
+    
     fbq('init', '1978493886105678');
     fbq('track', 'PageView');
     </script>
